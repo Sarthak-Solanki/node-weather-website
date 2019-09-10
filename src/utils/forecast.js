@@ -12,7 +12,7 @@ const forecast = (cordinate1,cordinate2,callback)=>{
                     temperature: body.currently.temperature,
                     precip: body.currently.precipProbability,
                     high: body.daily.data[0].temperatureHigh,
-                    low: temperatureLow
+                    low: body.daily.data[0].temperatureLow
                 }
                     );
             }
