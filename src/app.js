@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const app = express()
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const port  = process.env.PORT||3000
 
 //Defines pasth for express js
 const publicdirectory = path.join(__dirname,'../public')
@@ -77,6 +78,6 @@ app.get('*',(req,res)=>{
         name:"Sarthak"
     })
 })
-app.listen(3000, () => {
-  console.log('server started')
+app.listen(port, () => {
+  console.log('server started on '+port)
 })
