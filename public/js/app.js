@@ -17,7 +17,7 @@ messageTwo.textContent = '';
         }
         else{
         messageOne.textContent = data.location;
-        messageTwo.textContent = data.forecast.datasummary +" "+ data.forecast.temperature+" "+data.forecast.precip;
+        messageTwo.textContent = data.forecast.datasummary +" It is currently "+ data.forecast.temperature+" degrees out.There is "+data.forecast.precip+" chnaces of rain";
         console.log(data.forecast)
         }
         
