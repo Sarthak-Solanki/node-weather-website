@@ -7,10 +7,17 @@ const forecast = (cordinate1,cordinate2,callback)=>{
             }else if(body.error){
                 callback("Location in invalid");
             }else{
+                
+                console.log("data"+body.daily.data[0].temperatureMin);
+                
                 callback(undefined,{
+                    
                     datasummary: body.daily.data[0].summary,
                     temperature: body.currently.temperature,
                     precip: body.currently.precipProbability,
+                    mintemp : body.daily.data[0].temperatureMin,
+                    maxtemp : body.daily.data[0].temperatureMax,
+
                 }
                     );
             }
